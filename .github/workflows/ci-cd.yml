@@ -9,6 +9,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
+    # Isso avisa o GitHub que todos os comandos rodam dentro da subpasta
+    defaults:
+      run:
+        working-directory: nome-do-peso
 
     steps:
     - name: Checkout code
