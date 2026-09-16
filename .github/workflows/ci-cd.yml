@@ -23,10 +23,11 @@ jobs:
  
       - name: Run Tests
         run: npm test -- --coverage
- 
+
       - name: Build Application
         run: npm run build
-        - name: Deploy to GitHub Pages
+
+      - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
